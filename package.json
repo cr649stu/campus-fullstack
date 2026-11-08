@@ -1,0 +1,15 @@
+{
+  "name": "before-graduation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "「毕业之前」校园内容平台：博客 / 问答 / 纪念商城 三合一全栈项目",
+  "scripts": {
+    "dev": "concurrently -k -n API,WEB -c cyan,magenta \"pnpm -C server dev\" \"pnpm -C web dev\"",
+    "build": "pnpm -C web build",
+    "start": "pnpm -C server start",
+    "seed": "pnpm -C server seed"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

@@ -1,0 +1,8 @@
+packages:
+  - server
+  - web
+
+nodeLinker: hoisted
+
+allowBuilds:
+  esbuild: false

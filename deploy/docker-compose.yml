@@ -1,0 +1,15 @@
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    ports:
+      - "8787:8787"
+    environment:
+      HOST: 0.0.0.0
+      PORT: 8787
+      JWT_SECRET: "change-this-to-a-long-random-string"
+    volumes:
+      # SQLite 数据放在宿主机，重建容器不丢数据
+      - ./data:/app/server/data
+    restart: unless-stopped
